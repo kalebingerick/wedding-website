@@ -5,12 +5,19 @@
 * License: https://bootstrapmade.com/license/
 */
 
+:root {
+  --main-color: #e51f1f;
+  --secondary-color: #f4ebd4;
+  --white: white;
+  --black: black;
+}
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
+  font-family: "Lydian-Regular", sans-serif;
+  color: var(--main-color);
 }
 
 a {
@@ -30,55 +37,6 @@ h4,
 h5,
 h6 {
   font-family: "Jost", sans-serif;
-}
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #37517e;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #37517e;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@-webkit-keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*--------------------------------------------------------------
@@ -125,7 +83,7 @@ h6 {
 
 #header.header-scrolled,
 #header.header-inner-pages {
-  background: rgba(40, 58, 90, 0.9);
+  background: var(--white);
 }
 
 #header .logo {
@@ -174,11 +132,12 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
-  color: #fff;
+  color: var(--main-color);
   white-space: nowrap;
   transition: 0.3s;
+  letter-spacing: .125rem;
 }
 
 .navbar a i,
@@ -192,7 +151,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #47b2e4;
+  color: var(--black);
 }
 
 .navbar .getstarted,
@@ -277,6 +236,15 @@ h6 {
   .navbar .dropdown .dropdown:hover>ul {
     left: -100%;
   }
+}
+
+.navbar .rsvp-button {
+  display: block;
+  margin-left: 15px;
+  padding: 15px 25px;
+  background: var(--main-color);
+  text-align: center;
+  color: var(--secondary-color);
 }
 
 /**
@@ -390,13 +358,14 @@ h6 {
   display: block;
 }
 
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
   height: 80vh;
-  background: #37517e;
+  background: var(--white);
 }
 
 #hero .container {
@@ -583,30 +552,14 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Clients
+# Details Intro
 --------------------------------------------------------------*/
-.clients {
+.details-intro {
   padding: 12px 0;
   text-align: center;
-}
 
-.clients img {
-  max-width: 45%;
-  transition: all 0.4s ease-in-out;
-  display: inline-block;
-  padding: 15px 0;
-  filter: grayscale(100);
-}
-
-.clients img:hover {
-  filter: none;
-  transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-  .clients img {
-    max-width: 40%;
-  }
+  font-size: 55px;
+  line-height: 65px;
 }
 
 /*--------------------------------------------------------------
