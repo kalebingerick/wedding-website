@@ -44,6 +44,7 @@ h3 {
     'main';
  }
 
+ /*
  #header {
   display: grid;
   grid-gap: 100px;
@@ -84,14 +85,6 @@ h3 {
   grid-area: hero-content;
  }
 
-/*
- * END LAYOUT CSS
- */
-
-
-/*
- * BEGIN HEADER
- */
 header {
   display: flex;
   flex-direction: row;
@@ -121,10 +114,6 @@ nav {
 nav img {
   padding: 0 50px;
 }
-
-/*
- * END HEADER
- */
 
 a {
   color: var(--main-color);
@@ -193,3 +182,4 @@ a.button:hover {
 #event-details-section {
   padding-top: 15px;
 }
+*/
