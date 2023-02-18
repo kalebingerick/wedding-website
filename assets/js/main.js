@@ -1,8 +1,6 @@
 (function () {
   "use strict";
 
-  console.log("hello");
-
   // HELPER - selections
   const select = (el, all = false) => {
     el = el.trim();
