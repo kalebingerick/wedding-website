@@ -99,6 +99,9 @@ body {
   width: 100%;
 }
 
+/*
+TODO change these font sizes to relative font sizes
+*/
 section {
   margin-top: 100px;
 }
@@ -108,7 +111,128 @@ h1 {
   color: var(--main-color);
 }
 
+.navbar {
+  padding: 0;
+}
 
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--main-color);
+  white-space: nowrap;
+  transition: 0.3s;
+  letter-spacing: .125rem;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: var(--black);
+}
+
+#hero header {
+  height: 85vh;
+  background: transparent url("/assets/img/IMG_0567_social_Original.png") 0% 0% no-repeat padding-box;
+  background-size: cover;
+
+  display: flex;
+  text-align: center;
+}
+
+#hero header h1 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 200px;
+  color: var(--secondary-color);
+  align-self: flex-end;
+  flex-grow: 2;
+}
+
+#hero-blurb {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+#hero p {
+  color: var(--main-color);
+  font-size: 55px;
+  text-align: center;
+  margin: auto 25% auto 25%;
+  line-height: 4rem;
+}
+
+#hero-logo {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto auto auto;
+}
+
+#event-details {
+  background-color: var(--black);
+  color: var(--secondary-color);
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+#event-details h1 {
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+#event-details h2 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 2.5px;
+}
+
+#event-details hr {
+  width: 25%;
+  height: 1px;
+  background-color: gray;
+  border: none;
+}
+
+#address {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/*
+TODO add a hover state to the button
+*/
+.rsvp {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  font-weight: lighter;
+  font-size: medium;
+  padding: 1rem 2rem 1rem 2rem;
+}
 
 #about-us {
   display: grid;
@@ -130,13 +254,11 @@ h1 {
   grid-column: 4 / span 6;
 }
 
-/*
-TODO give this a max height to handle resizing the browser
-*/
 #gallery div {
   display: flex;
   justify-content: center;
   gap: 10px;
+  max-height: 10%;
 }
 
 #gallery div img {
