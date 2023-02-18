@@ -1,5 +1,5 @@
 :root {
-  --main-color: #e51f1f;
+  --main-color: #BF0005;
   --secondary-color: #f4ebd4;
   --white: white;
   --black: #262626;
@@ -113,6 +113,7 @@ h1 {
 
 .navbar {
   padding: 0;
+  text-transform: uppercase;
 }
 
 .navbar ul {
@@ -272,37 +273,44 @@ TODO add a hover state to the button
   margin-right: 10px;
 }
 
-#q-a {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 10px;
-}
-
-#q-a h1 {
+#faq h1 {
   text-align: center;
-  grid-column: 6 / span 2;
-  /* grid-row: 1 / span 2; */
 }
 
-#q-a details {
-  border-top: 2px solid var(--main-color);
-  text-align: left;
+.faq-list {
+  padding: 0 100px;
   color: var(--main-color);
-
-  padding-top: .25rem;
-  padding-bottom: .25rem;
-
-  grid-column: 3 / span 8;
 }
 
-#q-a details:last-child {
+.faq-list ul {
+  padding: 0;
+  list-style: none;
+}
+
+.faq-list ul:last-child {
   border-bottom: 2px solid var(--main-color);
 }
 
-#q-a details summary::before {
-  content: "+";
+.faq-list li {
+  padding: 20px;
+  position: relative;
+  border-top: 2px solid var(--main-color);
+}
+
+.faq-list a {
+  display: block;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
   color: var(--main-color);
-  padding-right: 10px;
+}
+
+.faq-list i {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 
