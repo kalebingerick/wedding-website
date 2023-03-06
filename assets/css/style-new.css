@@ -313,15 +313,15 @@ TODO add a hover state to the button
   letter-spacing: .25rem;
 }
 
+/*
+ * Note the gallery gap was happening because the 3 pictures 
+ * were too large for the frame - maybe on mobile we only pick 2?
+ */
 #gallery div {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-around;
 }
 
-#gallery div img {
-  flex-grow: 1;
-}
 
 #gallery p {
   text-align: right;
