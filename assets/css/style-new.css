@@ -3,6 +3,7 @@
   --secondary-color: #f4ebd4;
   --white: white;
   --black: #262626;
+  --mobile-max-width: 1000px;
 }
 
 /* Box sizing rules */
@@ -172,7 +173,7 @@ h1 {
 }
 
 #hero header {
-  height: 85vh;
+  height: 75vh;
   background: transparent url("/assets/img/IMG_0567_social_Original.png") 0% 0% no-repeat padding-box;
   background-size: cover;
 
@@ -187,9 +188,9 @@ h1 {
     height: 5vh;
   }
 
-#header.header-scrolled {
-  background: var(--black);
-}
+  #header.header-scrolled {
+    background: var(--black);
+  }
 
   #navbar {
     display: none;
@@ -302,33 +303,73 @@ TODO add a hover state to the button
   background-color: var(--main-color);
   color: var(--secondary-color);
   font-weight: lighter;
-  font-size: medium;
+  font-size: 1.25rem;
+  letter-spacing: .1rem;
   padding: 1rem 2rem 1rem 2rem;
+  border-style: none;
 }
 
-#about-us header {
+#about-us header h1 {
   color: var(--main-color);
-  font-size: 55px;
-  line-height: normal;
+  font-size: 6rem;
+  line-height: .9;
   letter-spacing: .25rem;
 }
+
 
 /*
  * Note the gallery gap was happening because the 3 pictures 
  * were too large for the frame - maybe on mobile we only pick 2?
  */
-#gallery div {
+/* #gallery div {
   display: flex;
   justify-content: space-around;
-}
+} */
 
 
-#gallery p {
+/* #gallery p {
   text-align: right;
   font-size: 16px;
   padding-top: 20px;
   margin-right: 10px;
+} */
+
+.marquee-content {
+  display: flex;
+  animation: scrolling 45s linear infinite;
 }
+
+.marquee-item {
+  flex: 0 0 16vw;
+  margin: 0 1vw;
+}
+
+.marquee-item img {
+  display: block;
+  width: 100%;
+}
+
+#mobile-image {
+  display: none;
+}
+
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-86vw); }
+}
+
+@media (max-width: 1000px) {
+  .marquee-content {
+    display: none;
+  }
+
+  #mobile-image {
+    display: block;
+    width: 100vw;
+  }
+  
+}
+
 
 #faq h1 {
   text-align: center;
@@ -370,13 +411,21 @@ TODO add a hover state to the button
   top: 0;
 }
 
+.collapsing {
+  transition: .1s transform eash-in-out;
+}
+
 
 #contact {
   background-color: var(--main-color);
   color: var(--secondary-color);
-  font-size: 55px;
+  font-size: 5rem;
   text-align: center;
   padding: 10%;
+}
+
+#contact p {
+  line-height: normal;
 }
 
 #contact a {
@@ -385,12 +434,14 @@ TODO add a hover state to the button
 
 #contact img {
   margin: auto;
+  margin-top: 2.5rem;
+  width: 6rem;
 }
 
 footer {
   background-color: var(--main-color);
   color: var(--secondary-color);
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }

@@ -68,4 +68,15 @@
     }
   });
 
+  on('click', '.faq-question', function(e) {
+    var element = select(".faq-question i");
+    if (element.classList.contains('bi-plus')) {
+      element.classList.add('bi-dash');
+      element.classList.remove('bi-plus');
+    } else {
+      element.classList.add('bi-plus');
+      element.classList.remove('bi-dash');
+    }
+  })
+
 })();
