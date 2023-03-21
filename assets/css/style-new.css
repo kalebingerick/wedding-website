@@ -289,6 +289,8 @@ h1 {
   height: 1px;
   background-color: gray;
   border: none;
+  margin: auto;
+  margin-top: 1rem;
 }
 
 #address {
