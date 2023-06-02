@@ -340,6 +340,10 @@ h1 {
   letter-spacing: .25rem;
 }
 
+#about-us p {
+  padding-top: 1rem;
+}
+
 #about-us img {
   width: 15vw;
   float: right;
@@ -364,29 +368,36 @@ h1 {
   margin-right: 10px;
 } */
 
-.marquee-content {
+.marquee {
   display: flex;
-  animation: scrolling 45s linear infinite;
+  overflow: hidden;
+  gap: 2rem;
+  user-select: none;
 }
 
-.marquee-item {
-  flex: 0 0 16vw;
-  margin: 0 1vw;
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-width: 100%;
+  animation: marquee 45s linear infinite;
 }
 
-.marquee-item img {
-  display: block;
-  width: 100%;
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 2rem));
+  }
 }
 
 #mobile-image {
   display: none;
 }
 
-@keyframes scrolling {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-86vw); }
-}
 
 @media (max-width: 1000px) {
   .marquee-content {
@@ -403,6 +414,11 @@ h1 {
 
 #faq h1 {
   text-align: center;
+  padding-bottom: 1rem;
+}
+
+.faq-answer {
+  padding-top: 1rem;
 }
 
 .faq-list {
