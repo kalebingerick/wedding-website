@@ -426,7 +426,6 @@ h1 {
 }
 
 .faq-list a {
-  display: block;
   position: relative;
   outline: none;
   cursor: pointer;
@@ -434,11 +433,15 @@ h1 {
   color: var(--main-color);
 }
 
-.faq-list i {
-  font-size: 24px;
-  position: absolute;
-  right: 0;
-  top: 0;
+.faq-question {
+  display: grid;
+  grid-template-columns: auto 1rem;
+  grid-template-rows: auto;
+}
+
+.faq-question i {
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 .collapsing {

@@ -68,15 +68,23 @@
     }
   });
 
-  on('click', '.faq-question', function(e) {
-    var element = select(".faq-question i");
-    if (element.classList.contains('bi-plus')) {
-      element.classList.add('bi-dash');
-      element.classList.remove('bi-plus');
-    } else {
-      element.classList.add('bi-plus');
-      element.classList.remove('bi-dash');
-    }
-  })
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', e => {
+      if (question.querySelector("i")) {
+        const allQuestions = document.querySelectorAll(".faq-question i");
+        allQuestions.forEach(el => {
+          el.classList.remove("bi-dash");
+          el.classList.add("bi-plus");
+        });
+
+        const expanded = question.querySelector("i");
+
+        if (!question.classList.contains("collapsed")) {
+          expanded.classList.add("bi-dash");
+          expanded.classList.remove("bi-plus");
+        }
+      }
+    })
+  });
 
 })();
