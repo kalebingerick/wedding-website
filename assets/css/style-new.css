@@ -104,7 +104,7 @@ body {
 TODO change these font sizes to relative font sizes
 */
 section {
-  margin-top: 100px;
+  margin-top: 8rem;
 }
 
 #hero {
@@ -112,7 +112,7 @@ section {
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 8rem;
   color: var(--main-color);
 }
 
@@ -164,22 +164,6 @@ h1 {
   color: var(--black);
 }
 
-#rsvp {
-  background-color: var(--main-color);
-  color: var(--secondary-color);
-  letter-spacing: .1rem;
-  padding: 1rem 2rem 1rem 2rem;
-  margin: .25rem 1rem .25rem 1rem;
-  border-style: none;
-
-  box-shadow: inset 0 0 0 0 var(--main-color);
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
-
-#rsvp:hover {
-  box-shadow: inset 150px 0 0 0 var(--secondary-color);
-  color: var(--main-color);
-}
 
 #mobile-navbar {
   display: none;
@@ -199,60 +183,6 @@ h1 {
 }
 
 
-@media (max-width: 1000px) {
-  #header {
-    background-color: var(--black);
-    height: 5vh;
-  }
-
-  #header.header-scrolled {
-    background: var(--black);
-  }
-
-  #navbar {
-    display: none;
-  }
-
-  #mobile-navbar {
-    display: grid;
-    grid-template-columns: 1fr 10%;
-    grid-template-rows: 10% 1fr;
-  }
-
-  #mobile-navbar i {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 5rem;
-    grid-column-start: 2;
-    align-self: end;
-
-    color: var(--secondary-color);
-  }
-
-  #mobile-links {
-    display: none;
-    grid-column-start: 1;
-    grid-column-end: span 2;
-    grid-row-start: 2;
-
-    background-color: var(--black);
-
-    border-radius: 5%;
-  }
-
-  #mobile-links a {
-    color: var(--secondary-color);
-    font-size: 2rem;
-  }
-
-  #hero header {
-    height: 60vh;
-    background: transparent url("/assets/img/IMG_0621_social_Original.png") 0% 0% no-repeat padding-box;
-    background-size: cover;
-  }
-  
-}
 
 #hero header h1 {
   text-transform: uppercase;
@@ -269,7 +199,7 @@ h1 {
 
 #hero p {
   color: var(--main-color);
-  font-size: 55px;
+  font-size: 3.25rem;
   text-align: center;
   margin: auto 25% auto 25%;
   line-height: 4rem;
@@ -314,6 +244,7 @@ h1 {
   margin-bottom: 2rem;
 }
 
+
 .rsvp {
   background-color: var(--main-color);
   color: var(--secondary-color);
@@ -322,15 +253,41 @@ h1 {
   letter-spacing: .1rem;
   padding: 1rem 2rem 1rem 2rem;
   border-style: none;
-
-  box-shadow: inset 0 0 0 0 var(--main-color);
-  margin: 0 -.25rem;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
-.rsvp:hover {
-  box-shadow: inset 150px 0 0 0 var(--secondary-color);
-  color: var(--main-color);
+
+#rsvp {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  letter-spacing: .1rem;
+  padding: 1rem 2rem 1rem 2rem;
+  margin: .25rem 1rem .25rem 1rem;
+  border-style: none;
+
+}
+
+
+@media (min-width: 1000px) {
+  .rsvp {
+    box-shadow: inset 0 0 0 0 var(--main-color);
+    margin: 0 -.25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+
+  #rsvp {
+    box-shadow: inset 0 0 0 0 var(--main-color);
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+
+  .rsvp:hover {
+    box-shadow: inset 150px 0 0 0 var(--secondary-color);
+    color: var(--main-color);
+  }
+
+  #rsvp:hover {
+    box-shadow: inset 150px 0 0 0 var(--secondary-color);
+    color: var(--main-color);
+  }
 }
 
 #about-us header h1 {
@@ -500,4 +457,103 @@ footer {
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+@media (max-width: 1000px) {
+  section {
+    height: 85vh;
+  }
+
+  #header {
+    background-color: var(--black);
+    height: 5vh;
+  }
+
+  #header.header-scrolled {
+    background: var(--black);
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #mobile-navbar {
+    display: grid;
+    grid-template-columns: 1fr 10%;
+    grid-template-rows: 10% 1fr;
+  }
+
+  #mobile-navbar i {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 5rem;
+    grid-column-start: 2;
+    align-self: end;
+
+    color: var(--secondary-color);
+  }
+
+  #mobile-links {
+    display: none;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 2;
+
+    background-color: var(--black);
+
+    border-radius: 5%;
+  }
+
+  #mobile-links a {
+    color: var(--secondary-color);
+    font-size: 2rem;
+  }
+
+  #hero header {
+    height: 60vh;
+    background: transparent url("/assets/img/IMG_0621_social_Original.png") 0% 0% no-repeat padding-box;
+    background-size: cover;
+  }
+
+  #hero p {
+    font-size: 4rem;
+    letter-spacing: 1.25px;
+    line-height: 4.5rem;
+    margin: auto 17% auto 17%;
+  }
+
+  #hero-logo {
+    margin-top: 3.5rem;
+    height: 5rem;
+  }
+
+  #event-details {
+    padding-top: 15vh;
+  }
+
+  #event-details h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+  }
+
+  #event-details hr {
+    width: 50%;
+    height: 2px;
+    background-color: gray;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+
+  #address {
+    font-size: 3rem;
+    margin-bottom: 3vh;
+  }
+
+  .rsvp {
+    font-size: 3rem;
+    padding: 2rem 3rem 2rem 3rem;
+    letter-spacing: 0.25rem;
+  }
 }
