@@ -220,6 +220,13 @@ h1 {
   padding-bottom: 5rem;
 }
 
+#event-details-logo {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 #event-details h1 {
   text-transform: uppercase;
   color: var(--secondary-color);
@@ -559,6 +566,7 @@ footer {
     margin-bottom: 2vh;
     margin-top: 2vh;
   }
+
 
   #event-details hr {
     width: 50%;
