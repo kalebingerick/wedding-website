@@ -175,7 +175,8 @@ h1 {
 
 #hero header {
   height: 75vh;
-  background: transparent url("/assets/img/IMG_0567_social_Original.png") 0% 0% no-repeat padding-box;
+  background: transparent url("/assets/img/Hero-Image.jpg") 0% 0% no-repeat padding-box;
+  background-position: center;;
   background-size: cover;
 
   display: flex;
@@ -343,7 +344,7 @@ h1 {
 .marquee {
   display: flex;
   overflow: hidden;
-  gap: 2rem;
+  gap: 1rem;
   user-select: none;
 }
 
@@ -352,9 +353,13 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
   min-width: 100%;
   animation: marquee 60s linear infinite;
+}
+
+.marquee-item img {
+  height: 60vh;
 }
 
 @keyframes marquee {
@@ -362,7 +367,7 @@ h1 {
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-100% - 2rem));
+    transform: translateX(calc(-100% - 1rem));
   }
 }
 
@@ -371,6 +376,11 @@ h1 {
   padding-top: 0.5rem;
   padding-right: 2rem;
   font-size: 1rem;
+}
+
+#photo-credit a {
+  color: var(--main-color);
+  text-decoration: none;
 }
 
 #mobile-image {
@@ -612,6 +622,7 @@ footer {
 
   #contact p {
     padding-top: 15vh;
+    font-size: 4rem;
   }
 
   #contact img {
