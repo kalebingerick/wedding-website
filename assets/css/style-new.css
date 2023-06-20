@@ -1,5 +1,5 @@
 :root {
-  --main-color: #BF0005;
+  --main-color: #D51F25;
   --secondary-color: #f4ebd4;
   --white: white;
   --black: #262626;
@@ -327,7 +327,10 @@ h1 {
 #about-us img {
   width: 15vw;
   float: right;
-  
+}
+
+#about-us a {
+  color: var(--main-color);
 }
 
 
