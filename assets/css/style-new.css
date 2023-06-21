@@ -174,7 +174,7 @@ h1 {
 }
 
 #mobile-header.header-scrolled {
-  background: var(--white);
+  display: none;
 }
 
 #hero header {
@@ -504,10 +504,9 @@ footer {
     display: none;
   }
 
-  /* Header */
   #mobile-header{
     display: block;
-    box-shadow: 1px 1px 5px 0px var(--gray);
+    text-align: center;
   }
 
   .mobile-header-logo{
@@ -519,93 +518,6 @@ footer {
 
   .logo-image {
     height: 3vh;
-  }
-
-  /* Nav menu */
-  .nav{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: var(--black);
-    overflow: hidden;
-
-  }
-  .menu a{
-    display: block;
-    padding: 30px;
-    color: var(--secondary-color);
-    font-size: 4rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-  }
-  .menu a:hover{
-    background-color: var(--gray);
-  }
-  .nav{
-    max-height: 0;
-    transition: max-height .5s ease-out;
-  }
-  /* Menu Icon */
-  .hamb{
-    cursor: pointer;
-    float: right;
-    padding: 50px 20px;
-    margin-right: 30px;
-  }/* Style label tag */
-
-  .hamb-line {
-    background: var(--main-color);
-    display: block;
-    height: 5px;
-    position: relative;
-    width: 4rem;
-
-  } /* Style span tag */
-
-  .hamb-line::before,
-  .hamb-line::after{
-    background: var(--main-color);
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-  }
-  .hamb-line::before{
-    top: 15px;
-  }
-  .hamb-line::after{
-    top: -15px;
-  }
-
-  .side-menu {
-    display: none;
-  } /* Hide checkbox */
-
-  #mobile-header:has(.side-menu:checked) {
-    background-color: var(--black);
-    transition: background-color .5s linear;
-  }
-
-  /* Toggle menu icon */
-  .side-menu:checked ~ nav{
-    max-height: 46%;
-  }
-  .side-menu:checked ~ .hamb .hamb-line {
-    background: transparent;
-  }
-  .side-menu:checked ~ .hamb .hamb-line::before {
-    transform: rotate(-45deg);
-    top:0;
-  }
-  .side-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top:0;
-  }
-
-  .side-menu:checked ~ .logo-image {
-    color: var(--secondary-color);
   }
 
   .rsvp-mobile {
