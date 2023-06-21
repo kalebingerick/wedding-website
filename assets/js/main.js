@@ -45,6 +45,22 @@
   }
 
   /**
+   * Toggle .header-scrolled class to #mobile-header when page is scrolled
+   */
+  let mobileSelectHeader = select('#mobile-header');
+  if (mobileSelectHeader) {
+    const headerScrolled = () => {
+        if (window.scrollY > 100) {
+            mobileSelectHeader.classList.add('header-scrolled');
+        } else {
+            mobileSelectHeader.classList.remove('header-scrolled');
+        }
+    }
+    window.addEventListener('load', headerScrolled);
+    onscroll(document, headerScrolled)
+  }
+
+  /**
    * Toggle mobile nav
    */
   // on('click', '.mobile-nav-toggle', function(e) {
@@ -61,10 +77,10 @@
   // }, true);
   on('click', '.mobile-nav-toggle', function(e) {
     var element = select('#mobile-links');
-    if (element.style.display === 'grid') {
+    if (element.style.display === 'block') {
       element.style.display = 'none';
     } else {
-      element.style.display = 'grid';
+      element.style.display = 'block';
     }
   });
 
