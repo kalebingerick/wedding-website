@@ -279,7 +279,7 @@ h1 {
 }
 
 
-@media (min-width: 1000px) {
+@media (min-width: 480px) {
   .rsvp {
     box-shadow: inset 0 0 0 0 var(--main-color);
     margin: 0 -.25rem;
@@ -402,7 +402,7 @@ h1 {
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 480px) {
   .marquee-content {
     display: none;
   }
@@ -498,7 +498,7 @@ footer {
   padding-bottom: 1rem;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 480px) {
 
   .desktop-hero {
     display: none;
