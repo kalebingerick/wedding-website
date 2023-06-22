@@ -103,4 +103,10 @@
     })
   });
 
+  on('click', '#about-us-link', function(e) {
+    const toShow = document.getElementsByClassName("not-first-section");
+    Array.from(toShow).forEach(el => el.style.display = "block");
+    document.getElementById("about-us-link").style.display = "none";
+  })
+
 })();

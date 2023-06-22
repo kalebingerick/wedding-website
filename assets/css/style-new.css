@@ -104,6 +104,10 @@ body {
   display: none;
 }
 
+.about-us-mobile {
+  display: none;
+}
+
 section {
   margin-top: 8rem;
 }
@@ -199,7 +203,7 @@ h1 {
 }
 
 #hero-blurb {
-  padding-top: 5rem;
+  padding-top: 7rem;
 }
 
 #hero p {
@@ -279,7 +283,7 @@ h1 {
 }
 
 
-@media (min-width: 480px) {
+@media (min-width: 1000px) {
   .rsvp {
     box-shadow: inset 0 0 0 0 var(--main-color);
     margin: 0 -.25rem;
@@ -402,7 +406,7 @@ h1 {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
   .marquee-content {
     display: none;
   }
@@ -498,11 +502,12 @@ footer {
   padding-bottom: 1rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
 
   .desktop-hero {
     display: none;
   }
+
 
   #header {
     display: none;
@@ -591,8 +596,8 @@ footer {
   }
 
   #event-details {
-    height: 70vh;
-    padding-top: 15vh;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
   }
 
   #event-details h2 {
@@ -621,6 +626,18 @@ footer {
     letter-spacing: 0.25rem;
   }
 
+  .about-us-desktop {
+    display: none;
+  }
+
+  .about-us-mobile {
+    display: block;
+  }
+
+  .not-first-section {
+    display: none;
+  }
+
   #about-us {
     height: fit-content;
     padding-top: 5%;
@@ -630,11 +647,11 @@ footer {
   }
 
   #about-us header h1 {
-    font-size: 8rem;
+    font-size: 10rem;
   }
 
   #about-us-contents {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     padding: 1rem;
   }
 
