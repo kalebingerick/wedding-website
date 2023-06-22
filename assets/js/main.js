@@ -107,6 +107,14 @@
     const toShow = document.getElementsByClassName("not-first-section");
     Array.from(toShow).forEach(el => el.style.display = "block");
     document.getElementById("about-us-link").style.display = "none";
-  })
+    document.getElementById("show-less-link").style.display = "block";
+  });
+
+  on('click', '#show-less-link', function(e) {
+    const toShow = document.getElementsByClassName("not-first-section");
+    Array.from(toShow).forEach(el => el.style.display = "none");
+    document.getElementById("about-us-link").style.display = "block";
+    document.getElementById("show-less-link").style.display = "none";
+  });
 
 })();
