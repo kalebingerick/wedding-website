@@ -100,9 +100,10 @@ body {
   width: 100%;
 }
 
-/*
-TODO change these font sizes to relative font sizes
-*/
+.mobile-hero {
+  display: none;
+}
+
 section {
   margin-top: 8rem;
 }
@@ -177,7 +178,7 @@ h1 {
   display: none;
 }
 
-#hero header {
+.desktop-hero {
   height: 75vh;
   background: transparent url("/assets/img/Hero-Image.jpg") 0% 0% no-repeat padding-box;
   background-position: center;;
@@ -188,8 +189,7 @@ h1 {
 }
 
 
-
-#hero header h1 {
+.desktop-hero-h1 {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 15vw;
@@ -500,6 +500,10 @@ footer {
 
 @media (max-width: 1000px) {
 
+  .desktop-hero {
+    display: none;
+  }
+
   #header {
     display: none;
   }
@@ -520,6 +524,43 @@ footer {
     height: 3vh;
   }
 
+  .mobile-hero {
+    display: flex;
+    height: 60vh;
+    background: transparent url("/assets/img/Hero-Image.jpg") 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .mobile-hero-h1 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 15vw;
+    color: var(--secondary-color);
+    align-self: flex-end;
+  }
+
+  .mobile-hero div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .mobile-hero div a {
+    width: 35%;
+    margin: 20px;
+    margin-bottom: 50px;
+  }
+
+  .mobile-links {
+    text-transform: uppercase;
+    width: 100%;
+  }
+
   .rsvp-mobile {
     margin-left: auto;
     margin-right: auto;
@@ -529,13 +570,6 @@ footer {
 
   .rsvp-mobile a {
     color: var(--main-color);
-  }
-
-  #hero header {
-    height: 60vh;
-    background: transparent url("/assets/img/Hero-Image.jpg") 0% 0% no-repeat padding-box;
-    background-size: cover;
-    background-position: center;
   }
 
   #hero header h1 {
