@@ -432,6 +432,11 @@ h1 {
   padding-top: 1rem;
 }
 
+
+.faq-answer p a {
+  color: var(--black);
+}
+
 .faq-list {
   padding: 0 100px;
   color: var(--main-color);
